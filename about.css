@@ -1,0 +1,498 @@
+:root {
+    --c-primary: #1f4037;       /* Dark, rich green for headings and footers */
+  --c-secondary: #2e8b57;     /* A vibrant medium green for buttons and links */
+  --c-secondary-dark: #256d45; /* Darker version for hover states */
+  --c-bg: #f7fafc;           /* Clean, light grey background */
+  --c-surface: #ffffff;      /* Pure white for cards and navigation */
+  --c-text-dark: #2d3748;     /* Dark grey for body text */
+  --c-text-light: #f7fafc;    /* Light text for dark backgrounds */
+  --c-shadow: rgba(0, 0, 0, 0.05);
+  --c-shadow-hover: rgba(0, 0, 0, 0.1);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+      font-family: "Segoe UI", system-ui, sans-serif;
+}
+.page-title-header {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: var(--c-primary);
+  color: var(--c-text-light);
+}
+
+.page-title-header h1 {
+  margin-bottom: 0.5rem;
+}
+
+.navbar-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  height: 80px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--c-surface);
+  box-shadow: 0 2px 10px var(--c-shadow);
+}
+
+.navbar-main .navbar-logo img {
+  height: 60px;
+  width: auto;
+}
+
+.navbar-main ul {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar-main a {
+  text-decoration: none;
+  color: var(--c-primary);
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: color 0.25s ease;
+}
+
+.navbar-main a:hover {
+  color: var(--c-secondary);
+}
+  .banner{
+   width: 100%;
+  height: 400px;
+
+  background-image: url("./content/banner.jpg");
+  background-size: cover;      
+    background-position:center; 
+  background-repeat: no-repeat;
+ margin-top: 10px;
+  text-align: center;
+  font-size: 2rem;
+  }
+  .banner img{
+    margin-top: 10px;
+  }
+
+.mainofcontent{
+    
+    border-color: blue;
+    border-style: double;
+    width: 60%;
+    text-align: center;
+    margin: 20px 10px 0px 20%;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+body{
+    background-color: #ddecdf;
+}
+.about{
+  background-color: #f6f8f7;
+  padding: 80px 10%;
+}
+.aboutcontent {
+  max-width: 1000px;
+}
+.aboutcontent h1 {
+  font-size: 2.6rem;
+  color: #0f3d2e;
+  margin-bottom: 25px;
+  position: relative;
+}
+.aboutcontent h1::after {
+  content: "";
+  width: 90px;
+  height: 4px;
+  background-color: #1b5e20;
+  display: block;
+  margin-top: 10px;
+  border-radius: 2px;
+}
+
+.aboutcontent h2 {
+  margin-top: 45px;
+  margin-bottom: 12px;
+  font-size: 1.35rem;
+  color: #1b5e20;
+}
+.aboutcontent p {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #333;
+}
+.aboutcontent .intro {
+  font-size: 1.1rem;
+  color: #222;
+}
+@media (max-width: 768px) {
+  .about {
+    padding: 60px 7%;
+  }
+
+  .aboutcontent h1 {
+    font-size: 2.1rem;
+  }
+
+  .aboutcontent h2 {
+    font-size: 1.25rem;
+  }
+
+  .aboutcontent p {
+    font-size: 1rem;
+  }
+}
+
+
+@media screen {
+  .feedbackDiv h1{
+  text-align: center;
+}
+ .feedbackDiv p{
+  text-align: center;
+  font-size: medium;
+  margin-left: 15vw;
+  margin-right: 15vw;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+
+}
+.feedbackform{
+  background-color: #2f7a64;
+  background-image: url(./content/Deosai-National-Park-1.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.feedbackform label{
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+.feedbackform input,
+.feedbackform textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 3px solid rgb(27, 68, 11);
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+#button{
+  display: block;
+  height: 45px;
+  width: auto;
+  min-width: 150px;
+  padding: 0 20px;
+  border-radius: 8px;
+  background-color: #f9fcfb;
+  color: #333;
+  margin: 10px auto 0;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+}
+#button:hover{
+  color:#1d6623;
+    background-color: 	#e0e9e0;
+     border-color:#579c6c;
+
+}
+}
+.footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--c-text-light);
+  background-color: var(--c-primary);
+  margin-top: 40px;
+}
+
+/*Hingol learn more page*/
+
+.hingol-intro{
+   padding: 50px 10%;
+   width: 90vw;
+}
+.introduction{
+  background-color: var(--c-bg);
+  padding: 20px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.introduction h2{
+  margin: 10px;
+  color: var(--c-primary);
+ border-bottom: 4px solid var(--c-secondary);
+ padding-bottom: 15px;
+ width: max-content;
+}
+.introduction p{
+  color: var(--c-text-dark);
+  padding: 20px;
+
+}
+.introduction img{
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  height:max-content;
+}
+.fact-flex{
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+}
+.fact-box{
+  width: 700px;
+  margin: 10px ;
+  box-shadow: 0 2px 10px var(--c-shadow);
+  background-color: var(--c-surface);
+
+border-left: 3px solid var(--c-primary);
+  padding: 10px 15px;
+}
+.landscape{
+   background-color: var(--c-bg);
+  padding: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-top: 50px;
+}
+.landscape h2{
+  margin: 10px;
+  color: var(--c-primary);
+ border-bottom: 4px solid var(--c-secondary);
+  padding-bottom: 15px;
+  width: max-content;
+}
+.landscape h3{
+  margin: 5px;
+  color: var(--c-secondary-dark);
+  margin-left: 10px;
+}
+.landscape p{
+  color: var(--c-text-dark);
+  padding: 20px;
+
+}
+.wildlife{
+   background-color: var(--c-bg);
+  padding: 20px;
+  overflow: hidden;
+  border-radius: 5px;
+    margin-top: 50px;
+}
+.wildlife h2{
+   margin: 10px;
+  color: var(--c-primary);
+border-bottom: 4px solid var(--c-secondary);
+ padding-bottom: 15px;
+ width: max-content;
+}
+.wildlife  p{
+  color: var(--c-text-dark);
+  padding: 20px;
+}
+.wildlife img{
+    width: 100%;
+  object-fit: cover;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  height:100%;
+}
+.significance{
+   background-color: var(--c-bg);
+  padding: 20px;
+  overflow: hidden;
+  border-radius: 5px;
+    margin-top: 50px;
+}
+.significance h2{
+     margin: 10px;
+     width: max-content;
+  color: var(--c-primary);
+border-bottom: 4px solid var(--c-secondary);
+ padding-bottom: 15px;
+
+}
+.significance p{
+  color: var(--c-text-dark);
+  padding: 20px;
+}
+.hazara-intro{
+   padding: 50px 10%;
+   width: 90vw;
+}
+.efforts{
+   background-color: var(--c-bg);
+  padding: 20px;
+  overflow: hidden;
+  border-radius: 5px;
+    margin-top: 50px;
+}
+.efforts h2{
+     margin: 10px;
+     width: max-content;
+  color: var(--c-primary);
+border-bottom: 4px solid var(--c-secondary);
+ padding-bottom: 15px;
+
+}
+.efforts p{
+  color: var(--c-text-dark);
+  padding: 20px;
+}
+.suhanara-intro{
+   padding: 50px 10%;
+   width: 90vw;
+}
+.deosai-intro{
+   padding: 50px 10%;
+   width: 90vw;
+}
+.khunjerab-intro{
+   padding: 50px 10%;
+   width: 90vw;
+}
+.cknp-intro{
+   padding: 50px 10%;
+   width: 90vw;
+}
+.ayubia-intro{
+   padding: 50px 10%;
+   width: 90vw;
+}
+.margalla-intro{
+   padding: 50px 10%;
+   width: 90vw;
+}
+.kirthar-intro{
+   padding: 50px 10%;
+   width: 90vw;
+}
+ /* General Body Styles */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    /* Main Content Container */
+    .contact-container {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 20px;
+    }
+
+    /* Contact Box */
+    .contact-box {
+      display: flex;
+      gap: 30px;
+      background: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    .contact-form,
+    .contact-info {
+      flex: 1;
+    }
+
+    .contact-form h2,
+    .contact-info h2 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+    /* Form Styles */
+    .contact-form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+      height: 120px;
+    }
+
+    .contact-form button {
+      background: #2e8b57;
+      color: #fff;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 15px;
+      transition: background-color 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: #256f46;
+    }
+
+    /* Contact Info Styles */
+    .contact-info p {
+      margin-bottom: 15px;
+      color: #555;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .contact-info strong {
+      color: #2c3e50;
+    }
+
+
+   .location{
+    background-color: var(--c-bg);
+  padding: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-top: 50px;
+  width: 50vw;
+   }
+   .location h1{
+    margin: 10px;
+     width: max-content;
+  color: var(--c-primary);
+border-bottom: 4px solid var(--c-secondary);
+ padding-bottom: 15px;
+   }
+
+  

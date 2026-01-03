@@ -1,0 +1,151 @@
+/* 
+  PARKS PAGE STYLES
+  A distinct style for the main parks listing page.
+*/
+
+/* Color Palette: A blue and earth-tone theme for a different feel. */
+:root {
+    --c-primary: #1f4037;       /* Dark, rich green for headings and footers */
+  --c-secondary: #2e8b57;     /* A vibrant medium green for buttons and links */
+  --c-secondary-dark: #256d45; /* Darker version for hover states */
+  --c-bg: #f7fafc;           /* Clean, light grey background */
+  --c-surface: #ffffff;      /* Pure white for cards and navigation */
+  --c-text-dark: #2d3748;     /* Dark grey for body text */
+  --c-text-light: #f7fafc;    /* Light text for dark backgrounds */
+  --c-shadow: rgba(0, 0, 0, 0.05);
+  --c-shadow-hover: rgba(0, 0, 0, 0.1);
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+body {
+  background-color: var(--p-bg);
+  color: var(--p-text);
+  line-height: 1.6;
+}
+
+/* Header & Navigation */
+.page-title-header {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: var(--c-primary);
+  color: var(--c-text-light);
+}
+
+.page-title-header h1 {
+  margin-bottom: 0.5rem;
+}
+
+.navbar-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  height: 80px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--c-surface);
+  box-shadow: 0 2px 10px var(--c-shadow);
+}
+
+.navbar-main .navbar-logo img {
+  height: 60px;
+  width: auto;
+}
+
+.navbar-main ul {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar-main a {
+  text-decoration: none;
+  color: var(--c-primary);
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: color 0.25s ease;
+}
+
+.navbar-main a:hover {
+  color: var(--c-secondary);
+}
+
+
+/* Main Parks Grid Section */
+.parks-section {
+  padding: 60px 8%;
+}
+
+.parks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.park-display-card {
+  background-color: var(--p-surface);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px var(--p-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.park-display-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+.park-display-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.park-display-card h3 {
+  padding: 20px 20px 10px;
+  color: var(--p-primary);
+}
+
+.park-display-card p {
+  padding: 0 20px 20px;
+  flex-grow: 1; /* Allows paragraph to fill space */
+}
+
+.park-card-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0 20px 20px;
+  background-color: var(--c-secondary);
+  color: var(--c-text-light);
+  font-weight: 700;
+  text-align: center;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.park-card-btn:hover {
+  background-color: var(--c-secondary-dark);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--c-text-light);
+  background-color: var(--c-primary);
+  margin-top: 40px;
+}

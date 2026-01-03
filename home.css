@@ -1,0 +1,441 @@
+/* GLOBAL STYLES & COLOR PALETTE */
+/* A cohesive color palette for a more professional and unified look. */
+:root {
+  --c-primary: #1f4037;       /* Dark, rich green for headings and footers */
+  --c-secondary: #2e8b57;     /* A vibrant medium green for buttons and links */
+  --c-secondary-dark: #256d45; /* Darker version for hover states */
+  --c-bg: #f7fafc;           /* Clean, light grey background */
+  --c-surface: #ffffff;      /* Pure white for cards and navigation */
+  --c-text-dark: #2d3748;     /* Dark grey for body text */
+  --c-text-light: #f7fafc;    /* Light text for dark backgrounds */
+  --c-shadow: rgba(0, 0, 0, 0.05);
+  --c-shadow-hover: rgba(0, 0, 0, 0.1);
+}
+
+/* GLOBAL STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+body {
+  background-color: var(--c-bg);
+  color: var(--c-text-dark);
+  line-height: 1.6;
+}
+
+
+/* HEADER & NAVIGATION */
+.page-title-header {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: var(--c-primary);
+  color: var(--c-text-light);
+}
+
+.page-title-header h1 {
+  margin-bottom: 0.5rem;
+}
+
+.navbar-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  height: 80px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--c-surface);
+  box-shadow: 0 2px 10px var(--c-shadow);
+}
+
+.navbar-main .navbar-logo img {
+  height: 60px;
+  width: auto;
+}
+
+.navbar-main ul {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar-main a {
+  text-decoration: none;
+  color: var(--c-primary);
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: color 0.25s ease;
+}
+
+.navbar-main a:hover {
+  color: var(--c-secondary);
+}
+
+.li-Button a{
+background-color: var(--c-secondary-dark);
+ border-style: solid;
+ border-color: var(--c-secondary-dark);
+ padding: 10px;
+ padding-left: 25px;
+ padding-right: 25px;
+ border-radius: 30px;
+ color: var(--c-text-light);
+}
+.li-Button a:hover{
+  background-color: var(--c-secondary);
+  border-color: var(--c-secondary);
+  color: var(--c-bg);
+
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar-main {
+    height: auto;
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .navbar-main ul {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+    width: 100%;
+  }
+}
+
+
+/* HERO CAROUSEL SECTION */
+.carousel-section {
+  position: relative;
+  text-align: center;
+}
+
+.carousel .d-block {
+  max-height: 80vh;
+  object-fit: cover;
+}
+
+/* Custom caption style to place it over the carousel */
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  padding: 20px;
+  bottom: 20%; /* Adjust vertical position */
+}
+
+.carousel-description {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 0 20px;
+  font-size: 1.1rem;
+  color: var(--c-text-dark);
+  opacity: 0.9;
+}
+
+/* TOP PARKS SECTION */
+.top-parks {
+  padding: 60px 8%;
+}
+
+.top-parks h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--c-primary);
+  margin-bottom: 40px;
+}
+
+/* Renamed from .container to avoid conflict with Bootstrap */
+.park-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.park-card {
+  position: relative;
+  width: 300px;
+  height: 420px;
+  overflow: hidden;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.park-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px var(--c-shadow-hover);
+}
+
+.park-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.park-card .card-content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: #fff;
+}
+
+.card-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: var(--c-secondary);
+  color: var(--c-surface);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.card-btn:hover {
+  background-color: var(--c-secondary-dark);
+}
+
+/* THINGS TO DO SECTION */
+.things-to-do {
+  padding: 60px 8%;
+}
+
+.things-to-do h2 {
+  color: var(--c-primary);
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+}
+
+.activities-grid {
+  display: grid;
+  /* This makes the grid responsive. It will fit as many 300px columns as it can,
+     and they will stack on smaller screens. */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.activity-card {
+  background-color: var(--c-surface);
+  box-shadow: 0 10px 25px var(--c-shadow);
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.activity-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px var(--c-shadow-hover);
+}
+
+.activity-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.activity-card h3,
+.activity-card p {
+  padding: 0 20px 20px;
+}
+
+.activity-card h3 {
+  padding-top: 20px;
+  color: var(--c-primary);
+}
+
+/* CONSERVATION SECTION */
+.conservation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 60px 8%;
+  align-items: center;
+}
+
+.conservation-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.conservation-text h2 {
+  font-size: 2.5rem;
+  color: var(--c-primary);
+  margin-bottom: 1rem;
+}
+
+.conservation-text h3 {
+  margin-top: 1.5rem;
+  color: var(--c-secondary);
+}
+
+.conservation-images {
+  flex: 1;
+  min-width: 300px;
+  display: grid;
+  gap: 1rem;
+}
+
+.conservation-images img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px var(--c-shadow-hover);
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--c-text-light);
+  background-color: var(--c-primary);
+  margin-top: 40px;
+}
+.cards{
+  padding: 50px 10%;
+   width: 90vw;
+}
+.event1{
+  display: flex;
+  width: 70vw;
+  height: 40vh;
+  overflow: hidden;
+  box-shadow:  0 10px 25px var(--c-shadow-hover); 
+  border-right: 3px solid var(--c-primary);
+  border-bottom: 3px solid var(--c-primary);
+  border-radius: 25px;
+  margin: 20px;
+}
+.event1 h1{
+  padding: 10px;
+  color: var(--c-primary);
+}
+.event1 p{
+  padding: 10px;
+  gap: 10px;
+}
+
+@media screen {
+  .image img{
+  height: 40vh;
+  width: 20vw;
+  border-radius: 20px;
+  object-fit: cover;
+  padding: 5px;
+}
+}
+.event2{
+  display: flex;
+  width: 70vw;
+  height: 40vh;
+  overflow: hidden;
+  box-shadow:  0 10px 25px var(--c-shadow-hover); 
+  border-left: 3px solid var(--c-primary);
+  border-bottom: 3px solid var(--c-primary);
+  border-radius: 25px;
+  margin: 30px;
+}
+.event2 h1{
+  padding: 10px;
+  color: var(--c-primary);
+}
+.event2 p{
+  padding: 10px;
+  gap: 10px;
+}
+
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 20px;
+  background-color: var(--c-bg);
+}
+
+.login-card {
+  background-color: var(--c-surface);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px var(--c-shadow);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-card h2 {
+  color: var(--c-primary);
+  margin-bottom: 24px;
+  font-size: 2rem;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--c-text-dark);
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--c-secondary);
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--c-secondary);
+  color: var(--c-surface);
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.login-btn:hover {
+  background-color: var(--c-secondary-dark);
+}
+
+.login-footer {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: var(--c-text-dark);
+}
+
+.login-footer a {
+  color: var(--c-secondary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-footer a:hover {
+  text-decoration: underline;
+}
