@@ -47,7 +47,19 @@
           <label for="message">Your Message</label>
           <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
 
-          <button type="submit">Send Message</button>
+         
+  <button id="submitBtn" type="button">Submit</button>
+
+  <!-- Success Message -->
+  <p id="successMessage" style="display:none; color:black; font-size:18px; text-align:center; margin-top:15px;">
+    ✔ Your message has been sent successfully.
+  </p>
+
+  <!-- Error Message -->
+  <p id="errorMessage" style="display:none; color:black; font-size:18px; text-align:center; margin-top:15px;">
+    ❗ Please fill the form first.
+  </p>
+
         </form>
       </div>
 
@@ -70,6 +82,39 @@
       <p>&copy; 2025 NationalParkExplorer. All Rights Reserved.</p>
     </div>
   </footer>
+<script>
+  const submitBtn = document.getElementById("submitBtn");
+  const successMessage = document.getElementById("successMessage");
+  const errorMessage = document.getElementById("errorMessage");
+
+  const nameField = document.getElementById("name");
+  const emailField = document.getElementById("email");
+  const messageField = document.getElementById("message");
+
+  submitBtn.addEventListener("click", function () {
+
+    // Trim to remove extra spaces
+    const name = nameField.value.trim();
+    const email = emailField.value.trim();
+    const message = messageField.value.trim();
+
+    // Hide both messages first
+    successMessage.style.display = "none";
+    errorMessage.style.display = "none";
+
+    // Validation
+    if (name === "" || email === "" || message === "") {
+      errorMessage.style.display = "block";
+    } else {
+      successMessage.style.display = "block";
+
+      // optional: form clear
+      nameField.value = "";
+      emailField.value = "";
+      messageField.value = "";
+    }
+  });
+</script>
 
 </body>
 </html>
