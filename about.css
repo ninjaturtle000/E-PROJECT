@@ -80,16 +80,6 @@
     margin-top: 10px;
   }
 
-.mainofcontent{
-    
-    border-color: blue;
-    border-style: double;
-    width: 60%;
-    text-align: center;
-    margin: 20px 10px 0px 20%;
-    font-size: 1.5rem;
-    padding: 10px;
-}
 body{
     background-color: #ddecdf;
 }
@@ -106,7 +96,7 @@ body{
   margin-bottom: 25px;
   position: relative;
 }
-.aboutcontent h1::after {
+/* .aboutcontent h1::after {
   content: "";
   width: 90px;
   height: 4px;
@@ -114,7 +104,7 @@ body{
   display: block;
   margin-top: 10px;
   border-radius: 2px;
-}
+} */
 
 .aboutcontent h2 {
   margin-top: 45px;
@@ -157,10 +147,10 @@ body{
  .feedbackDiv p{
   text-align: center;
   font-size: medium;
-  margin-left: 15vw;
+  /* margin-left: 15vw;
   margin-right: 15vw;
   margin-top: 10vh;
-  margin-bottom: 10vh;
+  margin-bottom: 10vh; */
 
 }
 .feedbackform{

@@ -19,7 +19,7 @@
         <a href="home.html" class="navbar-logo">
             <img src="./content/ChatGPT Image Dec 20, 2025, 07_22_24 AM.png" alt="National Parks of Pakistan Logo">
         </a>
-        <ul>
+        <!-- <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="events.html">Events</a></li>
             <li><a href="Park.html">Parks</a></li>
@@ -28,6 +28,18 @@
          <li class="li-Button"><a href="login.html">Log In</a></li>
          <li class="li-Button"><a href="signup.html">Sign In</a></li>
          </ul>
+         Ye tumhara index ka code hoga  -->
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="events.html">Events</a></li>
+  <li><a href="Park.html">Parks</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="contact.html">Contact</a></li>
+
+  <!-- Login / Signup -->
+  <li class="li-Button" id="loginBtn"><a href="login.html">Log In</a></li>
+  <li class="li-Button" id="signupBtn"><a href="signup.html">Sign In</a></li>
+</ul>
    
     </nav>
     <main>
@@ -186,5 +198,28 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
+    <!-- <script>
+  const loginBtn = document.getElementById("loginBtn");
+  const signupBtn = document.getElementById("signupBtn");
+
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+  if (isLoggedIn === "true") {
+    loginBtn.style.display = "none";
+    signupBtn.style.display = "none";
+  }
+</script> -->
+
+ <script>
+  const loginBtn = document.getElementById("loginBtn");
+  const signupBtn = document.getElementById("signupBtn");
+
+  const isLoggedIn = sessionStorage.getItem("isLoggedIn");
+
+  if (isLoggedIn === "true") {
+    loginBtn.style.display = "none";
+    signupBtn.style.display = "none";
+  }
+</script>
 
 </html>
